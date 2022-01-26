@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Course Form</title>
+	<style>
+	form{
+					border: 2px solid black;
+					width: fit-content;
+					text-align:center;
+					background-color:lightblue;
+					right-align:200px;
+				}
+		label{
+				display:inline-block;
+				width:150px;
+			}
+	</style>
+</head>
+<body>
+			<script>
+				function display(){
+
+								var CID=document.getElementById("c_id").value;
+								
+								var CName=document.getElementById("c_name").value;
+								var SName =document.getElementById("s_name").value;
+								var Snum=document.getElementById("s_no").value;
+								var Fees=document.getElementById("c_fees").value;
+								var Cdate=document.getElementById("c_date").value;
+								var mail=document.getElementById("s_mail").value;
+								var phone=document.getElementById("s_number").value;
+
+								var gender=validate();
+
+
+
+								document.write("Student Name : " + Sname);
+								document.write("<br>Gender :" + gender);
+								document.write("<br>Student E-mail : " + mail);
+								document.write(" <br>Student Contact Number : " + phone);
+								document.write("<br>Course ID : " + CID);
+								document.write("<br>Course Name: " + CName);
+								document.write("<br>Course Fees: " + Fees);
+								document.write("<br>Course Starting Date : " + Cdate);
+
+
+
+				function validate(){
+						if(document.getElementById("gender_male").checked){
+								var gd=document.getElementById("gender_male").value;
+								return gd;
+						}else if(document.getElementById("gender_female").checked){
+							var gd1=document.getElementById("gender_female").value;
+							return gd1;
+						
+						}else if(document.getElementById("gender_other").checked){
+								var gd2=document.getElementById("gender_other").value;
+								return gd2;
+						}				
+				}
+		
+}
+</script>
+
+
+
+
+
+
+<center><form>
+	<h2>Course Form</h2><br>
+	<label>Course ID</label>
+	<input type = "text" id="c_id"><br><br>
+	
+	<label>Course Name</label>
+	<input type="text" id="c_name"><br><br>
+	
+	<label>Student Name : </label>
+	<input type="text" id="s_name"><br><br>
+	
+	<label>Gender : </label>
+	<input type="radio" id="gender_male" name="gender">Male
+	<input type="radio" id="gender_female" name="gender">Female
+	<input type="radio" id="gender_other" name="gender">Other<br><br>
+	
+	<label>Student Roll No. : </label>
+	<input type="text" id="s_no"><br><br>
+	
+	<label>Student Email </label>
+	<input type="email" id="s_mail"><br><br>
+	
+	<label>Student Phone No. : </label>
+	<input type="text" id="s_number"><br><br>
+	
+	<label>Course Fees : </label>
+	<input type="text" id="c_fees"><br><br>
+	
+	<label>Course Starting Date : </label>
+	<input type="date" id="c_date"><br><br>
+	
+	<button onclick="display()">Submit</button>
+</form>
+</center>
+</body>
+</html>

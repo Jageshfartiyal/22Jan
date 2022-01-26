@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            form{
+                border:2px solid;
+                background-color: beige;
+            }
+            form{
+                margin-left: auto;
+                margin-right: auto;
+                position: absolute;
+                width: fit-content;
+                margin-left: 500px;
+                margin-top: 150px;
+                
+            }
+            h2{
+                text-align: center;
+            }
+            button{
+                /*Change the width as much as you like, but make sure 
+                margin-left and margin-right + width = 100%*/
+                width:50%;
+                margin-left:25%;
+                margin-right:25%;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <script>
+            function form(){
+                var name=document.getElementById("name").value;
+                var age=document.getElementById("age").value;
+                var course=document.getElementById("course").value;
+                var college=document.getElementById("college").value;
+                var contact=document.getElementById("contact").value;
+
+                document.write("Name :"+ name+"<br>"+"Age "+ age+"<br>"+"Course :"+ course+"<br>"+"College :"+ college);
+                document.write("<br>Contact :"+ contact);
+
+
+            }
+        </script>
+        <form onsubmit="form()">
+            <h2>Registration</h2>
+            <hr>
+            <table>
+                <tr>
+                    <td>Name </td>
+                    <td><input type="text" id="name" required> </td>
+                </tr>
+                <tr>
+                    <td>Age </td>
+                    <td><input type="text" id="age" required> </td>
+                </tr>
+                <tr>
+                    <td>Course </td>
+                    <td><input type="text" id="course" required> </td>
+                </tr>
+                <tr>
+                    <td>College  </td>
+                    <td><input type="text" id=college required> </td>
+                </tr>
+                <tr>
+                    <td>Contact Number  </td>
+                    <td><input type="text" id="contact" required> </td>
+                </tr>
+
+
+            </table>
+            <button >Submit</button>
+        </form>
+    </body>
+</html>
